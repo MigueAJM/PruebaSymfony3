@@ -1,0 +1,24 @@
+
+{% extends '::base.html.twig' %}
+{% block title %}
+    Products || Home
+{% endblock %}
+{% block stitle %}
+<h1 class="container">Agregar Productos</h1>
+{% endblock %}
+{% block body %}
+<form class="container">
+  <div class="mb-3">
+    <label for="key" class="form-label">Clave Producto</label>
+    <input type="numeric" class="form-control" id="key" placeholder="38160">
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="name" placeholder="Ingrese el nombre del producto">
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Precio</label>
+    <input type="numeric" class="form-control" id="price" placeholder="Ingrese el precio del producto">
+  </div>
+<form>
+{% endblock %}

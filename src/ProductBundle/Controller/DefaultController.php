@@ -12,6 +12,40 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+        
         return $this->render('@Product/Default/index.html.twig');
+    }
+    /**
+     * @Route("/create")
+     */
+    public function createAction()
+    {
+        return $this->render('@Product/Default/create.html.twig');
+    }
+
+    public function storeAction()
+    {
+        
+    }
+    /**
+     * @Route("/edit")
+     */
+    public function editAction()
+    {
+        return $this->render('@Product/Default/index.html.twig');
+    }
+    /**
+     * @Route("/update")
+     */
+    public function updateAction()
+    {
+        return $this->render('@Product/Default/create.html.twig');
+    }
+    /**
+     * @Route("/destroy")
+     */
+    public function destroyAction()
+    {
+        return $this->render('@Product/Default/create.html.twig');
     }
 }
