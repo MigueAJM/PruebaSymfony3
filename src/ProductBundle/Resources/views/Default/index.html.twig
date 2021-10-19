@@ -4,6 +4,26 @@
 {% endblock %}
 {% block stitle %}
 <h1 class="container">Catalogo de productos</h1>
+<div id="products" class="container">
+    <a href="" class="btn btn-secondary">Add</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">id</th><th scope="col">Clave</th><th scope="col">Nombre</th><th scope="col">Producto</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+                <tr>
+                    <th scope="row">{{product.id}}</th>
+                    <td>{{product.claveProducto}}</td>
+                    <td>{{product.Nombre}}</td>
+                    <td>{{product.Precio}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}
 {% block body %}
 

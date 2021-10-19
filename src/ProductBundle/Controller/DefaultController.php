@@ -12,8 +12,11 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        
-        return $this->render('@Product/Default/index.html.twig');
+        $repository = $this->getDoctrine()->getRepository('ProductBundle:Producto');
+        $prodcuts = $repository->findAll();
+        return $this->render('@Product/Default/index.html.twig', array(
+            'products' => $prodcuts
+        ));
     }
     /**
      * @Route("/create")
